@@ -1,0 +1,375 @@
+version: "2.0"
+
+nlu:
+
+- intent: query_premise
+  examples: |
+    - 我想咨询一些问题？
+    - 想了解一些有关病情的问题
+    - 我想了解一些问题
+    - 有一些疑惑需要解答一下
+    - 对于自己，有一些问题需要答疑解惑
+    - 有些问题想询问
+    - 问几个问题
+    - 可以帮我解答几个问题吗
+
+
+- intent: disease_symptom
+  examples: |
+    - [感冒](disease)什么症状
+    - [感冒](disease)那些症状
+    - [感冒](disease)症状有那些
+    - [感冒](disease)症状是什么
+    - [感冒](disease)什么表征
+    - [感冒](disease)什么行为
+    - [感冒](disease)哪些行为
+    - [感冒](disease)行为有哪些
+    - [感冒](disease)什么状况
+    - [感冒](disease)哪些状况
+    - [感冒](disease)状况有哪些
+    - [感冒](disease)现象是什么
+    - [感冒](disease)表现是什么
+    - [感冒](disease)行为是什么
+    - 什么症状表示[感冒](disease)
+    - 出现什么现象是[感冒](disease)
+
+
+- intent: symptom_disease
+  examples: |
+    - [胆心综合征](symptom)是什么疾病表现
+    - 出现[胆心综合征](symptom)是什么疾病
+    - 什么疾病的表征[胆心综合征](symptom)
+    - 哪种疾病的现象是[胆心综合征](symptom)
+    - [胆心综合征](symptom)是什么疾病的表征
+    - 什么疾病会出现[视近困难](symptom)
+    - [视近困难](symptom)表现为什么疾病
+    - 症状为[视近困难](symptom)是什么疾病
+
+
+
+
+- intent: disease_check
+  examples: |
+    - [感冒](disease)怎么检查
+    - [感冒](disease)检查项目是什么
+    - [感冒](disease)要做什么检查
+    - [感冒](disease)要做什么项目
+    - [感冒](disease)可以通过什么方式查出
+    - [感冒](disease)的诊断检查有哪些
+    - 怎么检查[感冒](disease)
+    - 通过做什么检查[感冒](disease)
+    - 什么检查可以判断[感冒](disease)
+    - 要做[感冒](disease)的检查项目有什么
+    - 针对[感冒](disease)可以做什么检查
+    - 什么方式可以测出[感冒](disease)
+    - 检查[感冒](disease)需要做什么检查项目
+    - 哪些项目能查出[感冒](disease)
+
+
+
+- intent: check_disease
+  examples: |
+    - [腹水检查](check)检查什么疾病
+    - [腹水检查](check)可以查出什么
+    - [腹水检查](check)能测出什么
+    - [腹水检查](check)可以测出哪些疾病
+    - 做[腹水检查](check)能查出什么疾病
+    - 通过[腹水检查](check)可以预防哪些疾病
+    - 什么疾病可以采用[腹水检查](check)
+    - [腹水检查](check)能检测出什么疾病
+    - [腹水检查](check)能有效抵制哪些疾病
+    - 什么疾病的检测需要[腹水检查](check)
+    - [腹水检查](check)跟什么疾病有关
+    - 那些疾病的检查需要做[腹水检查](check)
+
+
+- intent: disease_prevent
+  examples: |
+    - [感冒](disease)怎么预防
+    - [感冒](disease)预防
+    - [感冒](disease)防范
+    - [感冒](disease)如何防范
+    - [感冒](disease)如何抵制
+    - [感冒](disease)抵制
+    - [感冒](disease)怎么样有效抵制
+    - [感冒](disease)如何避开
+    - [感冒](disease)如何避掉
+    - [感冒](disease)如何防止
+    - [感冒](disease)如何躲避
+    - [感冒](disease)如何逃避
+    - [感冒](disease)如何绕开
+    - 预防[感冒](disease)可以做什么
+    - 咋样才能不得[感冒](disease)
+    - [感冒](disease)如何避掉
+    - 如何避开[感冒](disease)
+    - 咋样才可以不[感冒](disease)
+    - 如何不[感冒](disease)
+    - 如何可不[感冒](disease)
+    - 怎样有效抵制[感冒](disease)
+    - 怎么预防[感冒](disease)
+    - 如何有效的防止[感冒](disease)
+
+- intent: disease_lasttime
+  examples: |
+    - [感冒](disease)周期多长
+    - [感冒](disease)多久才能好
+    - [感冒](disease)多长时间
+    - [感冒](disease)几天能好
+    - [感冒](disease)几年能好
+    - [感冒](disease)多少小时可以好
+    - [感冒](disease)大概多少年能好
+    - [感冒](disease)的疗程大概多
+    - 多长时间能治好[感冒](disease)
+    - 治好[感冒](disease)要多长时间
+    - 治疗[感冒](disease)的周期多长
+    - [感冒](disease)的大概时间有多长
+    - 大概多久时长可以[感冒](disease)好
+
+
+- intent: disease_cureway
+  examples: |
+    - [感冒](disease)怎么治疗
+    - [感冒](disease)如何医治
+    - [感冒](disease)怎么医治
+    - [感冒](disease)怎么治
+    - [感冒](disease)怎么医
+    - [感冒](disease)如何治
+    - [感冒](disease)的医治方法
+    - [感冒](disease)咋治
+    - [感冒](disease)咋办
+    - [感冒](disease)疗法
+    - 怎么治疗[感冒](disease)
+    - 有什么疗法可以医治[感冒](disease)
+    - 针对[感冒](disease)有那些医治方法
+    - 对于[感冒](disease)咋办
+    - 如何治[感冒](disease)
+    - 咋办[感冒](disease)
+
+
+- intent: disease_cureprob
+  examples: |
+    - [感冒](disease)多大概率能治好
+    - [感冒](disease)多大几率能治好
+    - [感冒](disease)治好的希望有多大
+    - [感冒](disease)治好的希望大么?
+    - [感冒](disease)治好的希望大吗?
+    - [感冒](disease)治好的几率
+    - [感冒](disease)有几成可以治好
+    - [感冒](disease)可治疗的比例
+    - [感冒](disease)治疗的可能性
+    - [感冒](disease)可治的几率
+    - [感冒](disease)可以医的概率
+    - 有几成可以治好[感冒](disease)
+    - 多大概率能治好[感冒](disease)
+    - 治好[感冒](disease)的几率有多大
+    - 治好[感冒](disease)的希望有多大
+
+
+- intent: disease_easyget
+  examples: |
+    - [感冒](disease)的易感人群
+    - [感冒](disease)什么人容易感染
+    - [感冒](disease)易发人群
+    - [感冒](disease)什么人属于易感人群
+    - [感冒](disease)什么人容易得
+    - [感冒](disease)什么人容易感染
+    - 哪些人容易[感冒](disease)
+    - 哪些人容易[感冒](disease)
+    - 哪些人容易得[感冒](disease)
+    - 哪些人容易染上[感冒](disease)
+    - 染上[感冒](disease)的人
+    - 哪些人容易感染[感冒](disease)
+
+- intent: disease_desc
+  examples: |
+    - [感冒](disease)的相关介绍是什么
+    - [感冒](disease)是什么
+    - 什么是[感冒](disease)
+    - [感冒](disease)的常识
+    - [感冒](disease)的常识介绍
+    - 关于[感冒](disease)有什么介绍
+    - 可以解释一下[感冒](disease)吗？
+    - 有关[感冒](disease)有什么解释
+    - 对于[感冒](disease)有哪些见解
+    - [感冒](disease)具体怎么看
+
+
+- intent: disease_department
+  examples: |
+    - [感冒](disease)应该刮什么科室
+    - [感冒](disease)应该挂什么科
+    - [感冒](disease)挂什么科
+    - [感冒](disease)什么科室
+
+
+- intent: disease_cause
+  examples: |
+    - [感冒](disease)的原因是什么
+    - [感冒](disease)的成因
+    - [感冒](disease)的原因
+    - [感冒](disease)怎么回事
+    - 为什么[感冒](disease)
+    - 为什么会[感冒](disease)
+    - 怎么样才会[感冒](disease)
+    - 咋样才[感冒](disease)
+    - 什么导致了[感冒](disease)
+    - 咋样才致使[感冒](disease)
+    - 什么会导致[感冒](disease)
+    - 会导致[感冒](disease)的是什么
+
+- intent: disease_acompany
+  examples: |
+    - [感冒](disease)的并发症是什么
+    - [感冒](disease)的并发症
+    - [感冒](disease)并发症？
+    - [感冒](disease)并发的其他症状
+    - [感冒](disease)的并发症是什么?
+    - [感冒](disease)和什么一起发生
+    - [感冒](disease)和什么一并发生
+    - [感冒](disease)和什么一起出现
+    - [感冒](disease)和什么一并出现
+    - [感冒](disease)和什么一同出现
+    - [感冒](disease)和什么一同发生
+    - [感冒](disease)和什么伴随发生
+    - [感冒](disease)和什么共线
+    - 什么伴随[感冒](disease)一起出现
+    - 和[感冒](disease)一起发生的是什么
+
+
+- intent: food_do_disease
+  examples: |
+    - 什么病适合吃[茶叶蛋](food)？
+    - 什么病推荐吃[茶叶蛋](food)？
+    - 什么病应该吃[茶叶蛋](food)？
+    - 哪些病可以吃[茶叶蛋](food)？
+    - 有什么病可以吃[茶叶蛋](food)？
+    - 有哪些病适合吃[茶叶蛋](food)？
+    - 有哪些病推荐吃[茶叶蛋](food)？
+    - 哪些病应该吃[茶叶蛋](food)？
+    - [茶叶蛋](food)适合什么疾病
+    - [茶叶蛋](food)对什么病好
+    - [茶叶蛋](food)对于什么疾病有好处
+
+
+- intent: disease_drug
+  examples: |
+    - [感冒](disease)应该吃什么药?
+    - [感冒](disease)吃什么药?
+    - [感冒](disease)应该吃什么药品?
+    - [感冒](disease)应该吃什么胶囊?
+    - [感冒](disease)应该喝什么口服液?
+    - [感冒](disease)需要什么用药?
+    - [萎缩性咽炎](disease)应该吃什么消炎片?
+    - [萎缩性咽炎](disease)应该吃什么药品?
+    - [萎缩性咽炎](disease)应该吃什么口服液?
+    - [萎缩性咽炎](disease)需要什么药
+    - [萎缩性咽炎](disease)应该吃什么胶囊
+    - [萎缩性咽炎](disease)需要什么用药
+    - 吃什么胶囊可以针对[萎缩性咽炎](disease)
+    - 需要什么药可以治[萎缩性咽炎](disease)
+
+
+- intent: drug_disease
+  examples: |
+    - [上清丸](drug)可以治疗什么疾病？
+    - [上清丸](drug)可以治疗什么？
+    - [上清丸](drug)可以治啥？
+    - [上清丸](drug)可以治疗啥？
+    - [上清丸](drug)可以医治啥？
+    - [上清丸](drug)可以治愈啥？
+    - [上清丸](drug)可以主治啥？
+    - [上清丸](drug)可以主治什么？
+    - [上清丸](drug)有什么用？
+    - [上清丸](drug)有何用？
+    - [上清丸](drug)有什么用处？
+    - [上清丸](drug)有什么用途？
+    - [上清丸](drug)有什么好处？
+    - [上清丸](drug)有什么益处？
+    - [上清丸](drug)有何益处？
+    - [上清丸](drug)用来干什么？
+    - [上清丸](drug)用来做啥？
+    - [紫雪](drug)有何用？
+    - [骨痛灵酊](drug)有什么用处？
+    - [对乙酰氨基酚缓释片](drug)有什么用途？
+    - [藿香正气水](drug)可以治疗什么疾病？
+
+
+- intent: disease_not_food
+  examples: |
+    - [感冒](disease)忌食的膳食有什么
+    - [感冒](disease)不能吃的饮食有什么
+    - [感冒](disease)不可以吃的饮食有
+    - [感冒](disease)不建议吃的的饮食有什么
+    - [感冒](disease)不推荐吃的饮食有什么
+    - [感冒](disease)不能吃什么饮食
+    - [感冒](disease)不能吃什么
+    - [感冒](disease)不可以吃什么
+    - [感冒](disease)最好不要吃什么
+    - [感冒](disease)有什么忌口
+    - [感冒](disease)不能吃什么饮食
+    - [感冒](disease)不能吃什么膳食
+    - [感冒](disease)不能喝什么
+
+- intent: disease_do_food
+  examples: |
+    - [感冒](disease)宜食的饮食包括有什么
+    - [感冒](disease)推荐的饮食包括有什么
+    - [感冒](disease)可以吃的饮食有什么
+    - [感冒](disease)能吃的饮食有什么
+    - [感冒](disease)能吃什么
+    - [感冒](disease)可以吃什么
+    - [感冒](disease)有什么建议的饮食
+    - [感冒](disease)有什么推荐菜谱
+    - [感冒](disease)有什么推荐食谱
+    - [感冒](disease)可以吃什么菜
+    - [感冒](disease)有哪些补品
+    - [感冒](disease)有什么保健品推荐
+    - [感冒](disease)有什么菜推荐
+    - [感冒](disease)吃什么最好
+
+- intent: food_not_disease
+  examples: |
+    - 什么病不能吃[豆腐](food)
+    - 什么病不推荐吃[豆腐](food)
+    - 那些病不应该吃[豆腐](food)
+    - 什么样的病不应该吃[豆腐](food)
+    - 什么病不适合吃[茶叶蛋](food)？
+    - 哪些病可以吃[茶叶蛋](food)？
+    - 有什么病不可以吃[茶叶蛋](food)？
+    - 有哪些病不适合吃[茶叶蛋](food)？
+    - 有哪些病不推荐吃[茶叶蛋](food)？
+    - 哪些病不应该吃[茶叶蛋](food)？
+    - [茶叶蛋](food)不适合什么疾病
+    - [茶叶蛋](food)不利于什么疾病
+    - 什么病忌食[茶叶蛋](food)
+    - [茶叶蛋](food)什么病不能吃
+
+- intent: smallTalk
+  examples: |
+    - 吃什么
+    - [今天](time)吃什么
+    - 你想吃什么
+    - 有什么好吃的吗
+    - [今天](time)你吃饭了吗
+    - 我想吃饭
+    - [北京](location)的[烤鸭](food)真好吃
+    - [天津](location)的[包子](food)怎么样
+
+
+
+- intent: query_weather
+  examples: |
+    - 天气
+    - 查询天气
+    - 帮我查天气信息
+    - 我想知道[明天](time)的天气
+    - [今天](time)的天气怎么样
+    - 帮我查下[后天](time)的天气
+    - 查下[广州](location)的天气怎么样
+    -  [长沙](location)的天气
+    - [深圳](location)[明天](time)的天气
+    - 查下[今天](time)[上海](location)的天气
+    - 帮我查查[佛山](location)这[大后天](time)的天气
+    - [北京](location)[今天](time)
+    - [海淀](location)[明天](time)
+    - [朝阳](location)[后天](time)

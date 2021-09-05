@@ -1,0 +1,195 @@
+version: "2.0"
+stories:
+- story: query symptom
+  steps:
+  - intent: disease_symptom
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+- story: query check
+  steps:
+  - intent: disease_check
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+- story: query prevent
+  steps:
+  - intent: disease_prevent
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+- story: query lasttime
+  steps:
+  - intent: disease_lasttime
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+- story: query cureway
+  steps:
+  - intent: disease_cureway
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+- story: query cureprob
+  steps:
+  - intent: disease_cureprob
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+- story: query easyget
+  steps:
+  - intent: disease_easyget
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+- story: query desc
+  steps:
+  - intent: disease_desc
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+- story: query cause
+  steps:
+  - intent: disease_cause
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+- story: query acompany
+  steps:
+  - intent: disease_acompany
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+
+- story: query disease_department
+  steps:
+  - intent: disease_department
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+
+- story: query disease_drug
+  steps:
+  - intent: disease_drug
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+- story: query disease_not_food
+  steps:
+  - intent: disease_not_food
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+- story: query disease_do_food
+  steps:
+  - intent: disease_do_food
+  - action: utter_timeout
+  - action: disease_form
+  - active_loop: disease_form
+  - active_loop: null
+  - action: FindTheCorrespondingDisease
+  - action: utter_over
+- story: query disease
+  steps:
+  - intent: symptom_disease
+  - action: utter_timeout
+  - action: symptom_form
+  - active_loop: symptom_form
+  - active_loop: null
+  - action: FindTheCorrespondingSymptom
+  - action: utter_over
+- story: query check_disease
+  steps:
+  - intent: check_disease
+  - action: utter_timeout
+  - action: check_form
+  - active_loop: check_form
+  - active_loop: null
+  - action: FindTheCorrespondingCheck
+  - action: utter_over
+- story: query food_do_disease
+  steps:
+  - intent: food_do_disease
+  - action: utter_timeout
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: FindTheCorrespondingFood
+  - action: utter_over
+- story: query food_not_disease
+  steps:
+  - intent: food_not_disease
+  - action: utter_timeout
+  - action: food_form
+  - active_loop: food_form
+  - active_loop: null
+  - action: FindTheCorrespondingFood
+  - action: utter_over
+- story: query drug_disease
+  steps:
+  - intent: drug_disease
+  - action: utter_timeout
+  - action: drug_form
+  - active_loop: drug_form
+  - active_loop: null
+  - action: FindTheCorrespondingDrug
+  - action: utter_over
+
+- story: query smallTalk
+  steps:
+    - intent: smallTalk
+    - action: action_default_fallback
+
+- story: query weather
+  steps:
+  - intent: query_weather
+  - action: utter_moreinformation
+  - action: weather_form
+  - active_loop: weather_form
+  - active_loop: null
+  - action: FindTheCorrespondingweather
+
+
+- story: query premise
+  steps:
+  - intent: query_premise
+  - action: utter_help

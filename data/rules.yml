@@ -1,0 +1,233 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say smallTalk anytime the user says utter_iamabot
+  steps:
+  - intent: nlu_fallback
+  - action: action_default_fallback
+
+- rule: Say smallTalk_over anytime the user says over_welcome
+  steps:
+    - intent: smallTalk
+    - action: action_default_fallback
+
+
+#激活症状的表单
+- rule: activate query symptom form
+  steps:
+    - intent: disease_symptom
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+#激活检查的表单
+- rule: activate query check form
+  steps:
+    - intent: disease_check
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+#激活预防的表单
+- rule: activate query prevent form
+  steps:
+    - intent: disease_prevent
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+#激活周期的表单
+- rule: activate query lasttime form
+  steps:
+    - intent: disease_lasttime
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+
+#激活治疗方法的表单
+- rule: activate query cureway form
+  steps:
+    - intent: disease_cureway
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+#激活治疗概率的表单
+- rule: activate query cureprob form
+  steps:
+    - intent: disease_cureprob
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+#激活易感染人群的表单
+- rule: activate query easyget form
+  steps:
+    - intent: disease_easyget
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+#激活疾病描述的表单
+- rule: activate query desc form
+  steps:
+    - intent: disease_desc
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+#激活病因的表单
+- rule: activate query cause form
+  steps:
+    - intent: disease_cause
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+#激活病因的表单
+- rule: activate query acompany form
+  steps:
+    - intent: disease_acompany
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+#激活药物表单
+- rule: activate query drug form
+  steps:
+    - intent: disease_drug
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+#激活什么病不能吃什么的表单
+- rule: activate query disease_not_food form
+  steps:
+    - intent: disease_not_food
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+#激活什么病可以吃什么的表单
+- rule: activate query disease_do_food form
+  steps:
+    - intent: disease_do_food
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+#激活查询疾病的表单
+- rule: activate query disease form
+  steps:
+    - intent: symptom_disease
+    - action: utter_timeout
+    - action: symptom_form
+    - active_loop: symptom_form
+
+#激活检查疾病的表单
+- rule: activate query check_disease form
+  steps:
+    - intent: check_disease
+    - action: utter_timeout
+    - action: check_form
+    - active_loop: check_form
+
+#激活食物不能吃的表单
+- rule: activate query food_do_disease form
+  steps:
+    - intent: food_do_disease
+    - action: utter_timeout
+    - action: food_form
+    - active_loop: food_form
+
+#激活是我能吃的表单
+- rule: activate query food_not_disease form
+  steps:
+    - intent: food_not_disease
+    - action: utter_timeout
+    - action: food_form
+    - active_loop: food_form
+
+#激活什么药治疗什么病的表单
+- rule: activate query drug_disease form
+  steps:
+    - intent: drug_disease
+    - action: utter_timeout
+    - action: drug_form
+    - active_loop: drug_form
+
+#激活什么病去什么科室
+- rule: activate query disease_department form
+  steps:
+    - intent: disease_department
+    - action: utter_timeout
+    - action: disease_form
+    - active_loop: disease_form
+
+
+
+  #提交症状表单
+- rule: deactivate contact symptom_form
+  condition:
+  - active_loop: symptom_form
+  steps:
+    - active_loop: null
+    - action: FindTheCorrespondingSymptom
+    - action: utter_over
+
+#提交疾病表单
+- rule: deactivate contact disease_form
+  condition:
+  - active_loop: disease_form
+  steps:
+    - active_loop: null
+    - action: FindTheCorrespondingDisease
+    - action: utter_over
+
+#提交食物表单
+- rule: deactivate contact food_form
+  condition:
+  - active_loop: food_form
+  steps:
+    - active_loop: null
+    - action: FindTheCorrespondingFood
+    - action: utter_over
+
+#提交检查表单
+- rule: deactivate contact check_form
+  condition:
+  - active_loop: check_form
+  steps:
+    - active_loop: null
+    - action: FindTheCorrespondingCheck
+    - action: utter_over
+#提交药物表单
+- rule: deactivate contact drug_form
+  condition:
+  - active_loop: drug_form
+  steps:
+    - active_loop: null
+    - action: FindTheCorrespondingDrug
+    - action: utter_over
+
+- rule: activate contact sales form
+  steps:
+  - intent: query_weather
+  - action: utter_moreinformation
+  - action: weather_form
+  - active_loop: weather_form
+
+- rule: deactivate contact weather_form
+  condition:
+  - active_loop: weather_form
+  steps:
+  - active_loop: null
+  - action: FindTheCorrespondingweather
+

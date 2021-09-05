@@ -1,0 +1,194 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- thanks:
+    use_entities: true
+- disease_symptom:
+    use_entities: true
+- symptom_disease:
+    use_entities: true
+- disease_check:
+    use_entities: true
+- check_disease:
+    use_entities: true
+- disease_prevent:
+    use_entities: true
+- disease_lasttime:
+    use_entities: true
+- disease_cureway:
+    use_entities: true
+- disease_cureprob:
+    use_entities: true
+- disease_easyget:
+    use_entities: true
+- disease_desc:
+    use_entities: true
+- disease_cause:
+    use_entities: true
+- disease_acompany:
+    use_entities: true
+- food_do_disease:
+    use_entities: true
+- disease_drug:
+    use_entities: true
+- drug_disease:
+    use_entities: true
+- disease_not_food:
+    use_entities: true
+- disease_do_food:
+    use_entities: true
+- disease_department:
+    use_entities: true
+- food_not_disease:
+    use_entities: true
+- query_premise:
+    use_entities: true
+- smallTalk:
+    use_entities: true
+- query_weather:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- nlu_fallback:
+    use_entities: true
+entities:
+- disease
+- check
+- drug
+- food
+- symptom
+- location
+- time
+slots:
+  disease:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  check:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  drug:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  food:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  symptom:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  location:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+  time:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+responses:
+  utter_greet:
+  - text: 嘿！你好吗？
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 这里有一些让你振作起来的东西：
+  utter_did_that_help:
+  - text: 这对你有帮助吗？
+  utter_happy:
+  - text: 太好了，继续！
+  utter_help:
+  - text: 荣幸之至,有什么可以帮您的吗
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: 你好,我是Friday你的私人助手,请问有什么可以帮您的吗?
+  utter_moreinformation:
+  - text: 正在加载请稍后...
+  utter_anyting_else:
+  - text: 还有什么可以帮你
+  utter_out:
+  - text: 对不起,Friday暂时理解不了你的意思
+  utter_out1:
+  - text: 以下是查询到的一些相关信息
+  utter_ask_location:
+  - text: 想查询什么地方的天气
+  utter_ask_time:
+  - text: 想查询什么时间的天气
+  utter_over:
+  - text: Friday还有什么可以帮您的吗
+  utter_timeout:
+  - text: 请稍等,Friday正在为您诊断
+  utter_over_welcome:
+  - text: Friday,随时恭候
+  utter_exception:
+  - text: Friday,遇到了一些未知错误请联系管理员
+actions:
+- FindTheCorrespondingSymptom
+- FindTheCorrespondingFood
+- FindTheCorrespondingDrug
+- FindTheCorrespondingCheck
+- FindTheCorrespondingDisease
+- action_default_fallback
+- FindTheCorrespondingweather
+forms:
+  disease_form:
+    required_slots:
+      disease:
+      - entity: disease
+        type: from_entity
+      - intent: enter_data
+        type: from_text
+  check_form:
+    required_slots:
+      check:
+      - entity: check
+        type: from_entity
+      - intent: enter_data
+        type: from_text
+  food_form:
+    required_slots:
+      food:
+      - entity: food
+        type: from_entity
+      - intent: enter_data
+        type: from_text
+  drug_form:
+    required_slots:
+      drug:
+      - entity: drug
+        type: from_entity
+      - intent: enter_data
+        type: from_text
+  symptom_form:
+    required_slots:
+      symptom:
+      - entity: symptom
+        type: from_entity
+      - intent: enter_data
+        type: from_text
+  weather_form:
+    required_slots:
+      location:
+      - entity: location
+        type: from_entity
+      - intent: enter_data
+        type: from_text
+      time:
+      - entity: time
+        type: from_entity
+      - intent: enter_data
+        type: from_text
+e2e_actions: []
