@@ -11,7 +11,6 @@
 
 ```python
 本项目仅供学习参考,转载请注明出处
-项目后续更新上传至 https://gitee.com/LUOFAN-666/Medical_Robot_Rasa
 ```
 
 <hr />
