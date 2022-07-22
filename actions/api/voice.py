@@ -1,9 +1,4 @@
 # -*- codeing = utf-8 -*-
-# @Time :2021/8/20 15:51
-# @Author : 兢兢业业的小码农
-# @File : voice.py
-# @Software : PyCharm
-# @Email: 1795947368@qq.com
 
 from aip import AipSpeech
 import pyaudio
