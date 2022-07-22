@@ -9,7 +9,6 @@
 返回结果：{"result":0,"content":"内容"}
 　　　　　result　状态，0表示正常，其它数字表示错误
 　　　　　content　信息内容
-想要学习Python？Python学习交流群：1136201545满足你的需求，资料都已经上传群文件，可以自行下载！
 '''
 import urllib.request
 import time
