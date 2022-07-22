@@ -1,9 +1,4 @@
 # -*- codeing = utf-8 -*-
-# @Time :2021/8/12 14:59
-# @Author : 兢兢业业的小码农
-# @File : 00.py
-# @Software : PyCharm
-# @Email: 1795947368@qq.com
 
 import os
 from itertools import combinations
