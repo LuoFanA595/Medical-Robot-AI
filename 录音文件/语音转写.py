@@ -51,4 +51,4 @@ if __name__ == "__main__":
     # 初始化
     bdr = BaiduRest("test_python", api_key, api_secert)
     # 识别test.wav语音内容并显示
-    print(bdr.getText(r"D:\pycharm\python15\rasa_医疗\录音文件\input.wav"))
+    print(bdr.getText(r"D:\pycharm\录音文件\input.wav"))
