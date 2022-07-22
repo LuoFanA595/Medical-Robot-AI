@@ -1,9 +1,5 @@
 # -*- codeing = utf-8 -*-
-# @Time :2021/8/20 20:57
-# @Author : 兢兢业业的小码农
-# @File : 文字转语音.py
-# @Software : PyCharm
-# @Email: 1795947368@qq.com
+
 import pyttsx3
 from pyttsx3.voice import Voice
 def yuyin(hua):
