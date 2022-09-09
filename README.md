@@ -108,7 +108,7 @@ Terminal终端输入 rasa shell --debug
 
 ```bash
 # 在运行前 先启动actions服务
-Terminal终端命令执行:rasa run actions --acionts actions.actions
+Terminal终端命令执行:rasa run actions --actions actions.actions
 
 # 运行Run_Text_To_Voice-Friday.py文件开启(文字到语音)对话模块
 ```
@@ -117,7 +117,7 @@ Terminal终端命令执行:rasa run actions --acionts actions.actions
 
 ```bash
 # 在运行前 先启动actions服务
-Terminal终端命令执行:rasa run actions --acionts actions.actions
+Terminal终端命令执行:rasa run actions --actions actions.actions
 
 # 运行Run_Voice_To_Voice-Friday.py文件开启(语音到语音)对话模块
 # 此功能可直接与Friday语音交互
