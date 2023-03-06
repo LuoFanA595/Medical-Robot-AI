@@ -75,6 +75,9 @@ actions
 
 # 3.项目所需安装包已打包在requirements.txt中
   Terminal终端命令执行:pip install -r requirements.txt 即可安装
+  
+# 关与rasa X版本匹配问题解决方法如下（rasaX无响应）
+https://luofan595.blog.csdn.net/article/details/121145483
 ```
 
 ###  **rasa-voice-interface项目安装教程** 
