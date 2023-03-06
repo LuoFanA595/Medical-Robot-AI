@@ -198,6 +198,11 @@ https://rasa.com/blog/how-to-build-a-voice-assistant-with-open-source-rasa-and-m
 https://github.com/RasaHQ/rasa-voice-interface
 ```
 
+<h3>后续</h3>
+```html
+目前天气查询或闲聊接口可能已经失效，后续接入ChatGPT使用一下吧。。。
+```
+
 <h3>rasa官方文档指南推荐</h3>
 
 ```html
