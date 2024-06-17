@@ -78,6 +78,12 @@ actions
   
 # 关与rasa X版本匹配问题解决方法如下（rasaX无响应）
 https://luofan595.blog.csdn.net/article/details/121145483
+
+# 关于py2neo-2020.1版本无法下载问题
+1. 可以直接pip install py2neo,无需指定版本号
+2. neo4j连接方法更改,例如:
+   graph = Graph("http://localhost:7474/", auth=("neo4j", "neo4j"))
+
 ```
 
 ###  **rasa-voice-interface项目安装教程** 
