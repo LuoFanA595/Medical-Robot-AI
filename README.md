@@ -109,6 +109,9 @@ Terminal终端命令执行:rasa train
 <h3> 终端交互方式</h3>
 
 ```bash
+# 在运行前 先启动actions服务
+Terminal终端命令执行:rasa run actions --actions actions.actions
+
 Terminal终端输入 rasa shell
 Terminal终端输入 rasa shell --debug
 ```
