@@ -112,6 +112,8 @@ Terminal终端命令执行:rasa train
 # 在运行前 先启动actions服务
 Terminal终端命令执行:rasa run actions --actions actions.actions
 
+docker容器启动:docker run -p 8000:8000 rasa/duckling
+
 Terminal终端输入 rasa shell
 Terminal终端输入 rasa shell --debug
 ```
@@ -122,6 +124,8 @@ Terminal终端输入 rasa shell --debug
 # 在运行前 先启动actions服务
 Terminal终端命令执行:rasa run actions --actions actions.actions
 
+docker容器启动:docker run -p 8000:8000 rasa/duckling
+
 # 运行Run_Text_To_Voice-Friday.py文件开启(文字到语音)对话模块
 ```
 
@@ -130,6 +134,8 @@ Terminal终端命令执行:rasa run actions --actions actions.actions
 ```bash
 # 在运行前 先启动actions服务
 Terminal终端命令执行:rasa run actions --actions actions.actions
+
+docker容器启动:docker run -p 8000:8000 rasa/duckling
 
 # 运行Run_Voice_To_Voice-Friday.py文件开启(语音到语音)对话模块
 # 此功能可直接与Friday语音交互
